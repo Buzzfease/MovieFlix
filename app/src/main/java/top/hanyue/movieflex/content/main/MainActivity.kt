@@ -148,22 +148,20 @@ class MainActivity : MovieFlexBaseActivity() {
         }
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            if (null != mTitleList) {
-                holder.itemView.tag = position
-                holder.nameTv.text = mTitleList[position].name
-                holder.itemView.onFocusChangeListener =
-                    View.OnFocusChangeListener { view, b ->
-                        // TODO xml 设置 android:duplicateParentState="true" selector 无效，临时这样处理.
-                        val tv = view.findViewById<TextView>(R.id.title_tv)
-                        val lineView = view.findViewById<View>(R.id.title_line_view)
-                        lineView.setBackgroundColor(ContextCompat.getColor(this@MainActivity, if (b) R.color.title_select_color else R.color.clear_color))
+            holder.itemView.tag = position
+            holder.nameTv.text = mTitleList[position].name
+            holder.itemView.onFocusChangeListener =
+                View.OnFocusChangeListener { view, b ->
+                    // TODO xml 设置 android:duplicateParentState="true" selector 无效，临时这样处理.
+                    val tv = view.findViewById<TextView>(R.id.title_tv)
+                    val lineView = view.findViewById<View>(R.id.title_line_view)
+                    lineView.setBackgroundColor(ContextCompat.getColor(this@MainActivity, if (b) R.color.title_select_color else R.color.clear_color))
+                    tv.setTextColor(ContextCompat.getColor(this@MainActivity, if (b) R.color.title_select_color else R.color.title_none_color))
+                    // 焦点已不再.
+                    if (view.tag as Int != viewPager.currentItem) {
                         tv.setTextColor(ContextCompat.getColor(this@MainActivity, if (b) R.color.title_select_color else R.color.title_none_color))
-//                        // 焦点已不再.
-//                        if (view.tag as Int != viewPager.currentItem) {
-//                            tv.setTextColor(ContextCompat.getColor(this@MainActivity, if (b) R.color.title_select_color else R.color.title_none_color))
-//                        }
                     }
-            }
+                }
         }
 
         override fun getItemCount(): Int {
