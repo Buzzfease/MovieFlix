@@ -1,0 +1,75 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <declare-styleable name="lbBaseGridView">
+        <attr name="focusOutFront" format="boolean"/>
+        <attr name="focusOutEnd" format="boolean"/>
+        <attr name="focusOutSideStart" format="boolean"/>
+        <attr name="focusOutSideEnd" format="boolean"/>
+        <attr name="horizontalMargin" format="dimension"/>
+        <attr name="verticalMargin" format="dimension"/>
+        <attr name="android:gravity"/>
+    </declare-styleable>
+
+    <style name="LoadingDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <!-- 输入文本 -->
+    <style name="NewEditTextStyle">
+        <item name="android:layout_width">@dimen/et_width</item>
+        <item name="android:layout_height">@dimen/et_height</item>
+        <item name="android:layout_marginLeft">@dimen/et_left_margin</item>
+        <item name="android:paddingLeft">@dimen/et_left_padding</item>
+        <item name="android:paddingRight">@dimen/et_left_padding</item>
+        <item name="android:background">@drawable/btn_bg_seletor_blue_gray</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/whilte</item>
+        <item name="android:textSize">@dimen/et_text_size</item>
+    </style>
+
+    <style name="NewTextViewStyle">
+        <item name="android:layout_width">@dimen/tv_width</item>
+        <item name="android:layout_height">@dimen/tv_height</item>
+        <item name="android:layout_marginLeft">@dimen/tv_left_margin</item>
+        <item name="android:paddingLeft">@dimen/tv_left_padding</item>
+        <item name="android:paddingRight">@dimen/tv_left_padding</item>
+        <item name="android:background">@drawable/btn_bg_seletor_blue_gray</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/whilte</item>
+        <item name="android:textSize">@dimen/tv_text_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 按钮 -->
+    <style name="NewBtnStyle">
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:background">@drawable/btn_bg_seletor_blue_gray</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:textColor">@color/commom_all_white</item>
+        <item name="android:textSize">@dimen/btn_text_size</item>
+    </style>
+
+</resources>
